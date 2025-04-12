@@ -1,0 +1,220 @@
+/* Header */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Full-width Dropdown */
+.full-width-dropdown .dropdown-menu {
+    width: 100vw !important;
+    position: fixed !important; /* Use fixed positioning to break out of navbar constraints */
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important; /* Ensure it positions below the navbar */
+    padding: 0;
+    max-height: 400px; /* Prevent overflow */
+    overflow-y: auto; /* Scroll if too many columns */
+}
+
+/* Topics Columns */
+.topics-columns {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.topics-column {
+    flex: 0 0 20%; /* 5 columns (100% / 5 = 20%) */
+    max-width: 20%;
+    border-right: 1px solid #dee2e6;
+}
+
+@media (max-width: 1200px) {
+    .topics-column {
+        flex: 0 0 25%; /* 4 columns on medium screens */
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 992px) {
+    .topics-column {
+        flex: 0 0 33.333%; /* 3 columns on smaller screens */
+        max-width: 33.333%;
+    }
+}
+
+@media (max-width: 768px) {
+    .topics-column {
+        flex: 0 0 50%; /* 2 columns on mobile */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .topics-column {
+        flex: 0 0 100%; /* 1 column on very small screens */
+        max-width: 100%;
+    }
+}
+
+/* Topic Dropdown Items */
+.topic-item {
+    position: relative;
+    padding: 10px 20px;
+    border-bottom: 1px solid #dee2e6;
+    display: block;
+    color: #212529;
+    text-decoration: none;
+}
+
+.topic-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Nested Dropdown for Programs */
+.nested-dropdown {
+    position: relative;
+}
+
+.nested-dropdown .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 1px;
+    display: none;
+    min-width: 200px;
+}
+
+/* Show nested dropdown on hover */
+.nested-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Program Items */
+.program-item {
+    padding: 8px 20px;
+    display: block;
+    color: #212529;
+    text-decoration: none;
+}
+
+.program-item:hover {
+    background-color: #d3374a !important;
+    color: #fff !important;
+}
+
+/* Banner Image */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.controls-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+    width: 450px;
+    max-width: 100%;
+}
+
+/* More Info Button */
+.btn-primary {
+    background-color: #d3374a !important; /* Default Bootstrap primary color */
+    border-color: #d3374a !important;;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #94303b !important; /* Custom highlight color */
+    border-color: #94303b !important;
+}
+
+/* Clear Button (Search) */
+.btn-secondary {
+    background-color: #d3374a !important; /* Default Bootstrap secondary color */
+    border-color: #d3374a !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+    background-color: #94303b !important; /* Custom highlight color */
+    border-color: #94303b !important;
+}
+
+.form-control,
+.form-select {
+    border-color: #ced4da; /* Default Bootstrap border color */
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #d3374a !important; /* Custom highlight color for focus */
+    box-shadow: 0 0 0 0.25rem rgba(211, 55, 74, 0.25) !important; /* Custom focus ring */
+}
+
+option:select {
+    background-color: #d3374a !important;
+    color: #fff !important; /* Ensure text is readable */
+}
+
+.tile {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 576px) {
+    .tile {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .tile {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+
+.tile-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
