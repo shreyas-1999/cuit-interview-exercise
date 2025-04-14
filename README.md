@@ -22,17 +22,17 @@ A dropdown to sort topics by:
 Sorting applies to filtered search results too.
 
 # User Guide to run the Exercise
-* ## Prerequisites
+### Prerequisites
 * Python 3.x: Ensure Python is installed on the system.
 * Web browser (tested on chrome and edge)
 
-* ## Install Dependencies
+### Install Dependencies
 Install Flask and flask-cors:
 ```bash
 pip install flask flask-cors
 ```
 
-* ## Start the Flask server
+### Start the Flask server
 open the terminal in the 'backend' directory and run the server.py file.
 ```bash
 python server.py
