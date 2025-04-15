@@ -43,7 +43,8 @@ The front-end files need to be served over HTTP due to CORS restrictions. Open a
 ```bash
 python -m http.server 8000
 ```
-Open the browser and navigate to http://127.0.0.1:8000. The home page should load with the topic tiles. If the data fails to load, check the error messages in the console and run the server in debug mode.
+Now, with the server running, hit the following url: http://localhost:5000/openday on your favourite browser to veiw the application. The home page should load, presenting all the data. You can try out various screen sizes to check the responsiveness of the application. (Note: Only the home page is implemented as part of this exercise).
+Alternatively, you can navigate to the frontend directory and open the index.html file directly. If the data fails to load, check the error messages in the console, ensure all the dependencies are installed and check if the server is running without errors.
 
 # Frameworks Used
 HTML/CSS/JavaScript: For the front-end structure, styling, and functionality.
