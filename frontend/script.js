@@ -117,14 +117,31 @@ $(document).ready(function() {
                     sortedTopics.sort((a, b) => a.name.localeCompare(b.name));
                     break;
                 case 'title-desc':
-                    sortedTopics.sort((a, b) => b.name.localeCompare(b.name));
+                    sortedTopics.sort((a, b) => b.name.localeCompare(a.name));
                     break;
-                case 'start-asc':
-                    sortedTopics.sort(() => new Date(openDayData.start_time) - new Date(openDayData.start_time));
-                    break;
-                case 'start-desc':
-                    sortedTopics.sort(() => new Date(openDayData.start_time) - new Date(openDayData.start_time));
-                    break;
+                    case 'start-asc':
+                        // Assuming topics should have individual start times, if not then use program times
+                        sortedTopics.sort((a, b) => {
+                            const aStart = a.programs && a.programs.length > 0
+                                ? new Date(Math.min(...a.programs.map(p => new Date(p.start_time))))
+                                : new Date(openDayData.start_time);
+                            const bStart = b.programs && b.programs.length > 0
+                                ? new Date(Math.min(...b.programs.map(p => new Date(p.start_time))))
+                                : new Date(openDayData.start_time);
+                            return aStart - bStart;
+                        });
+                        break;
+                    case 'start-desc':
+                        sortedTopics.sort((a, b) => {
+                            const bStart = b.programs && b.programs.length > 0
+                                ? new Date(Math.min(...b.programs.map(p => new Date(p.start_time))))
+                                : new Date(openDayData.start_time);
+                            const aStart = a.programs && a.programs.length > 0
+                                ? new Date(Math.min(...a.programs.map(p => new Date(p.start_time))))
+                                : new Date(openDayData.start_time);
+                            return bStart - aStart;
+                        });
+                        break;
                 default:
                     break;
             }
