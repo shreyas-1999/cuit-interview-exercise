@@ -9,10 +9,10 @@
     position: fixed !important; /* Use fixed positioning to break out of navbar constraints */
     left: 0 !important;
     right: 0 !important;
-    top: auto !important; /* Ensure it positions below the navbar */
+    top: auto !important;
     padding: 0;
-    max-height: 400px; /* Prevent overflow */
-    overflow-y: auto; /* Scroll if too many columns */
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 /* Topics Columns */
@@ -22,36 +22,41 @@
     width: 100%;
 }
 
+/* 5 columns (100% / 5 = 20%) */
 .topics-column {
-    flex: 0 0 20%; /* 5 columns (100% / 5 = 20%) */
+    flex: 0 0 20%; 
     max-width: 20%;
     border-right: 1px solid #dee2e6;
 }
 
+/* 4 columns on medium screens */
 @media (max-width: 1200px) {
     .topics-column {
-        flex: 0 0 25%; /* 4 columns on medium screens */
+        flex: 0 0 25%;
         max-width: 25%;
     }
 }
 
+/* 3 columns on smaller screens */
 @media (max-width: 992px) {
     .topics-column {
-        flex: 0 0 33.333%; /* 3 columns on smaller screens */
+        flex: 0 0 33.333%;
         max-width: 33.333%;
     }
 }
 
+/* 2 columns on mobile */
 @media (max-width: 768px) {
     .topics-column {
-        flex: 0 0 50%; /* 2 columns on mobile */
+        flex: 0 0 50%;
         max-width: 50%;
     }
 }
 
+/* 1 column on very small screens */
 @media (max-width: 576px) {
     .topics-column {
-        flex: 0 0 100%; /* 1 column on very small screens */
+        flex: 0 0 100%;
         max-width: 100%;
     }
 }
@@ -194,6 +199,7 @@ option:select {
     margin-bottom: 20px;
 }
 
+/* 2 tiles on small screen */
 @media (min-width: 576px) {
     .tile {
         flex: 0 0 50%;
@@ -201,6 +207,7 @@ option:select {
     }
 }
 
+/* 3 tiles on large screen */
 @media (min-width: 768px) {
     .tile {
         flex: 0 0 33.333%;
